@@ -18,6 +18,7 @@ jobs:
   deploy:
     environment: 
         name: development
+        url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
