@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "prod": "vite --mode production",
-    "build-dev": "NODE_ENV=development tsc && vite build --mode development",
-    "build-prod": "NODE_ENV=production tsc && vite build --mode production",
+    "build-dev": "tsc && vite build --mode development",
+    "build-prod": "tsc && vite build --mode production",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -16,6 +16,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/node": "^20.8.3",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
