@@ -4,7 +4,7 @@ import { config } from "./config";
 
 function App() {
   useEffect(() => {
-    console.log(import.meta.env.VITE_STAGE);
+    console.log("", import.meta.env.VITE_STAGE);
   }, []);
   return (
     <>
