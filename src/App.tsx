@@ -11,6 +11,7 @@ function App() {
       {config.outputFolder || "NONe"}
       <br></br>
       {import.meta.env.VITE_STAGE || "undefined"}
+      <p>testing</p>
     </>
   );
 }
