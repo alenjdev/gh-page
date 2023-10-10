@@ -36,12 +36,12 @@ jobs:
         run: npm install
       - name: Print source
         run: cat ./src/App.tsx
-      - name: Build
         env:
           VITE_STAGE: ${{ env.VITE_STAGE }}
+      - name: Build
         run: |
-          npm run build-dev
           env
+          npm run build-dev
       - name: Make the script files executable
         run: chmod +x handle-dev.sh
       - name: Run the scripts
