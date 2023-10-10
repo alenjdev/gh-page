@@ -39,6 +39,7 @@ jobs:
           VITE_STAGE: ${{ env.VITE_STAGE }}
         run: |
           npm run build-dev
+          env
       - name: Make the script files executable
         run: chmod +x handle-dev.sh
       - name: Run the scripts
