@@ -34,10 +34,11 @@ jobs:
           cache: "npm"
       - name: Install dependencies
         run: npm install
-      - name: Set envVars
-        run: export VITE_STAGE="${{ env.VITE_STAGE }}"
       - name: Build
-        run: npm run build-dev
+        env:
+          VITE_STAGE: ${{ env.VITE_STAGE }}
+        run: |
+          npm run build-dev
       - name: Make the script files executable
         run: chmod +x handle-dev.sh
       - name: Run the scripts
